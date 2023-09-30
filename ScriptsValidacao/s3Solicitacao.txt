@@ -1,0 +1,5 @@
+$1 e obrigatorio;
+$2 e obrigatorio;
+$3 e obrigatorio;
+$4 e obrigatorio;
+

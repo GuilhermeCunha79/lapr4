@@ -1,0 +1,92 @@
+@startuml
+autonumber
+
+
+participant ":RealizarTarefaPendenteUI" as UI
+participant ":RealizarTarefaPendenteController" as CTRL
+participant ":AuthzRegistry" as AR
+participant "authz\n:AuthorizationService" as AS
+participant "us\n:UserSession" as US
+participant "su\n:SystemUser" as SU
+participant ":ColaboradorRepository" as CR
+participant ":TarefaRepository" as TR
+participant ":Tarefa" as T
+
+activate UI
+UI -> CTRL : create
+activate CTRL
+UI -> CTRL : username=obterUsernameColaborador()
+CTRL -> AR : authz=authorizationService()
+activate AR
+deactivate AR
+CTRL -> AS : us=session()
+activate AS
+deactivate AS
+CTRL -> US : su=authenticatedUser()
+activate US
+US -> SU : username=identity()
+activate SU
+deactivate SU
+deactivate US
+UI -> UI : doShow()
+opt
+UI -> CTRL : tarefasAprovacaoPendentes(username)
+CTRL -> CR : colaborador=findByUsername(username)
+activate CR
+deactivate CR
+CTRL -> TR : findTarefasAprovacaoPendentesColaborador(Colaborador)
+activate TR
+deactivate TR
+CTRL -> UI : Tarefas
+UI -> CTRL : realizarTarefaAprovacaoPendente(Tarefa, dadosFormulario, isTarefaAprovada)
+CTRL -> T : validarDadosFormulario(dadosFormulario)
+activate T
+deactivate T
+CTRL -> T : atualizarDadosFormulario(dadosFormulario)
+activate T
+deactivate T
+opt
+CTRL -> CTRL : criarTarefasFluxoValido(Tarefa)
+note left : isTarefaAprovada : true
+CTRL -> T : alterarEstadoTarefa(FINALIZADA)
+activate T
+deactivate T
+end opt
+opt
+CTRL -> CTRL : criarTarefasFluxoInvalido(Tarefa)
+note left : isTarefaAprovada : false
+CTRL -> T : alterarEstadoTarefa(REJEITADA)
+activate T
+deactivate T
+end opt
+CTRL -> TR : save(Tarefa)
+activate TR
+deactivate TR
+end opt
+opt
+UI -> CTRL : realizarTarefaResolucaoPendente(Tarefa, dadosFormulario)
+UI -> CTRL : tarefasResolucaoPendentes(username)
+CTRL -> CR : colaborador=findByUsername(username)
+activate CR
+deactivate CR
+CTRL -> TR : findTarefasResolucaoPendentesColaborador(Colaborador)
+activate TR
+deactivate TR
+CTRL -> UI : Tarefas
+CTRL -> T : validarDadosFormulario(dadosFormulario)
+activate T
+deactivate T
+CTRL -> T : atualizarDadosFormulario(dadosFormulario)
+activate T
+deactivate T
+CTRL -> T : alterarEstadoTarefa(FINALIZADA)
+activate T
+deactivate T
+CTRL -> TR : save(Tarefa)
+activate TR
+deactivate TR
+end opt
+deactivate CTRL
+deactivate UI
+
+@enduml

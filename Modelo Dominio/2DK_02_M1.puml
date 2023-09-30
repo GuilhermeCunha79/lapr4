@@ -1,0 +1,308 @@
+@startuml
+
+
+package agregado1 <<Folder>> {
+entity PedidoDraft
+Object IdentificadorPedidoDraft
+Object DataSolicitacaoDraft
+Object UrgenciaDraft
+}
+
+
+package agregado2 <<Folder>>{
+entity Cliente
+Object Email
+Object PasswordCliente
+
+}
+
+package agregado3 <<Folder>>{
+entity Colaborador
+Object Username
+Object NumMecanografico
+Object NomeCurto
+Object NomeCompleto
+Object DataNascimento
+Object Morada
+Object EmailInstitucional
+Object NumeroContacto
+Object PasswordColaborador
+}
+
+package agregado4 <<Folder>>{
+entity Criticidade
+Object Etiqueta
+Object Valor
+Object CorDeGravidade
+Object TempoMaximo
+Object TempoMedio
+}
+
+
+package agregado5 <<Folder>>{
+entity Funcao
+Object NomeFuncao
+
+}
+
+package agregado6 <<Folder>>{
+entity Equipa
+Object CodigoEquipa
+Object Acronimo
+Object Designacao
+}
+
+package agregado7 <<Folder>>{
+entity Departamento
+Object CodigoDepartamento
+Object Descricao
+Object Cor
+}
+
+package agregado8 <<Folder>>{
+entity Catalogo
+Object IdentificadorCatalogo
+Object TituloCatalogo
+Object DescricaoBreveCatalogo
+Object DescricaoCompletaCatalogo
+Object IconeCatalogo
+}
+
+package agregado9 <<Folder>>{
+entity Servico
+
+Object IconeServico
+Object AtividadeRealizacao
+Object IsDraft
+Object ScriptRealizacaoTarefa
+Object DescricaoBreveServico
+Object DescricaoCompletaServico
+Object KeyWord
+Object CodigoServico
+Object TituloServico
+Object DataEntradaVigorFluxo
+Object requerFeedback
+
+entity Formulario
+entity AtributoFormulario
+Object EtiquetaFormulario
+Object DescricaoAtributo
+Object TipoDadosAtributo
+Object ExpressaoRegular
+Object NomeVariavel
+Object ScriptValidacao
+Object IdentificadorFormulario
+Object NomeFormulario
+}
+
+package agregado10 <<Folder>>{
+entity Pedido
+Object Feedback
+Object DataLimiteResolucao
+Object EstadoPedido
+}
+
+package agregado11 <<Folder>>{
+entity FluxoDeAtividade
+
+}
+
+package agregado12 <<Folder>>{
+entity Tarefa
+Object EstadoTarefa
+}
+
+
+entity AtributoFormulario{
+
+}
+
+entity Colaborador {
+
+  }
+
+
+
+
+ entity Cliente {
+
+  }
+
+  entity Funcao {
+
+  }
+
+  entity Equipa {
+
+  }
+
+  entity Departamento {
+
+  }
+  entity Catalogo {
+
+  }
+  entity Servico{
+
+  }
+  entity Tarefa {
+
+  }
+   entity Criticidade  {
+
+  }
+
+  entity Pedido {
+
+  }
+
+
+
+ entity FluxoDeAtividade{
+
+  }
+
+entity Formulario{
+
+}
+
+entity PedidoDraft{
+
+}
+
+
+
+Formulario "1" --> "*" AtributoFormulario : desencadeiam >
+Formulario --> NomeFormulario
+Formulario --> IdentificadorFormulario
+Formulario --> ScriptValidacao
+
+AtributoFormulario --> EtiquetaFormulario
+AtributoFormulario --> DescricaoAtributo
+AtributoFormulario --> TipoDadosAtributo
+AtributoFormulario --> ExpressaoRegular
+AtributoFormulario --> NomeVariavel
+AtributoFormulario "1 " -->"0..* " AtributoFormulario : influencia >
+
+
+
+
+Cliente --> PasswordCliente
+Cliente --> Email
+
+Servico -->DataEntradaVigorFluxo
+
+
+
+
+Pedido --> DataLimiteResolucao
+Pedido --> EstadoPedido
+
+PedidoDraft --> IdentificadorPedidoDraft
+PedidoDraft --> DataSolicitacaoDraft
+PedidoDraft --> UrgenciaDraft
+
+
+
+
+
+Servico --> CodigoServico
+Servico --> TituloServico
+Servico --> KeyWord
+Servico -> IconeServico
+Servico --> DescricaoCompletaServico
+Servico ---> DescricaoBreveServico
+Servico --> IsDraft
+Servico --> requerFeedback
+Servico "1"  --> "0..1" ScriptRealizacaoTarefa
+
+
+Funcao --> NomeFuncao
+
+
+Catalogo --> IdentificadorCatalogo
+Catalogo --> TituloCatalogo
+Catalogo ---> DescricaoBreveCatalogo
+Catalogo ---> DescricaoCompletaCatalogo
+Catalogo -> IconeCatalogo
+
+Colaborador --> Username
+Colaborador --> NumMecanografico
+Colaborador --> NomeCurto
+Colaborador --> NomeCompleto
+Colaborador --> DataNascimento
+Colaborador --> Morada
+Colaborador --> EmailInstitucional
+Colaborador --> NumeroContacto
+Colaborador --> PasswordColaborador
+
+
+
+
+Equipa --> CodigoEquipa
+Equipa --> Acronimo
+Equipa --> Designacao
+
+
+Departamento --> CodigoDepartamento
+Departamento --> Descricao
+Departamento --> Cor
+
+Feedback -> Cliente
+
+Criticidade --> Etiqueta
+Criticidade --> Valor
+Criticidade --> CorDeGravidade
+Criticidade --> TempoMaximo
+Criticidade --> TempoMedio
+
+Tarefa --> EstadoTarefa
+
+Servico --> AtividadeRealizacao
+
+
+
+
+Equipa "*" --> "1" Departamento : integra >
+
+Colaborador "*"-->"1..*" Equipa : integra >
+
+Colaborador "1..*"--> "1" Equipa : são responsáveis por >
+
+Colaborador "1"--> "0..*" Colaborador : é responsável por >
+
+Colaborador "1" --> " 0..*" Catalogo : gere >
+
+Equipa "1..*" --> "1..*" Catalogo : tem acesso >
+
+Servico "1" --> "0..1" Formulario : tem >
+
+Pedido "1" --> "1" Servico : refere-se a >
+
+Pedido "*"-->"1..*" Tarefa : resulta em >
+
+Servico "*"-->"1" Criticidade : tem >
+
+Cliente "*"-->"1..*" Pedido : efetua >
+
+Catalogo "*"-->"1..*" Servico : organiza >
+
+Catalogo "*"-->"0..*" Catalogo : tem >
+
+Colaborador "*"-->"1" Funcao : tem >
+
+Catalogo "*" -->"1"  Criticidade : tem >
+
+Pedido "1" -> "1" PedidoDraft: referencia >
+
+Pedido "*" -> "1" FluxoDeAtividade : tem >
+
+Pedido -> Feedback
+
+
+Colaborador "1" --> "0..1" Tarefa : realiza >
+
+Servico "1" -->"1"FluxoDeAtividade : tem >
+
+
+@enduml

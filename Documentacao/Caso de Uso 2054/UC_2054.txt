@@ -1,0 +1,64 @@
+UC 4.1.1 - Como RRH, eu pretendo registar um novo tipo de equipa.
+
+#1.Requisitos
+Verificação que apenas o Responsável pelos Recursos Humanos pode registar um novo tipo de equipa (verificação da função do utilizador).
+
+#2.Análise
+O RRH pretende registar um novo tipo de equipa, denominado como Departamento.
+Deve portanto inserir um codigo de departamento, uma breve descrição sobre as funcionalidades desse mesmo departamento, e deve tambem ser responsavel pela atribuição de uma cor ao departamento.
+Tanto o código de departamento como a cor devem cumprir regras de negocio. Ambas devem ser únicas no sistema.
+
+#3.Design
+
+Foi criado o controlador RegistarDepartamentoController usando o padrão Controller, responsável pelo processo de criação do tipo de equipa, aqui denominado como Departamento.
+Este controlador por sua vez faz uso da classe Departamento para criar uma instância de departamento, que por sua vez usa uma instância da classe Cor. 
+Para persistir esta informação no sistema é usado o padrão Repository. O controlador usa DepartamentoRepository para guardar a informação em base de dados.
+
+Diagrama de Sequência:
+
+	title SD - Registar Departamento
+
+	participant ":RegistarDepartamentoUI" as rui
+	participant ":RegistarDepartamentoController" as ctrl
+	participant ":PersistenceContext" as pc
+	participant ":RepositoryFactory" as rf
+	participant ":DepartamentoRepository" as repo
+    	participant ":CodigoUnicoDepartamento" as code
+	participant ":Cor" as cor
+	participant ":Departamento" as dp
+
+	rui->ctrl:create
+	ctrl->pc:repositories()
+	pc->rf:create
+	rf->repo:create
+	pc-->ctrl:RepositorioDepartamento
+
+	rui->rui:doShow()
+
+	rui->ctrl:registarDepartamento(codigo, descricaoDepartamento, vermelho, verde, azul, nomeCor)
+   	 ctrl->repo:departamentos = findAll()
+    
+   	 ctrl->code: codigoDepartamento = novoCodigo(codigo)
+   	 ctrl->repo:verificarCodigoUnico(departamentos, codigoDepartamento)
+    
+   	 ctrl->cor: corDepartamento = novaCor(vermelho, verde, azul, nomeCor)
+    	 ctrl->repo:verificarCor(departamentos, corDepartamento)
+   
+
+	 ctrl->dp:novoDepartamento = create(codigoDepartamento, descricaoDepartamento, corDepartamento)
+	 ctrl->repo:save(novoDepartamento)
+
+#4.Testes
+
+* O departamento tem que ter um código de departamento único
+* O codigo de departamento não pode ser vazio nem espaço(s)
+*
+* O departamento tem que ter uma descrição de departamento
+* A descricao do departamento não pode ser vazio nem espaço(s)
+*
+* O departamento tem que ter uma cor de departamento única
+* A cor de departamento segue as regras de negócio da classe cor 
+
+
+
+

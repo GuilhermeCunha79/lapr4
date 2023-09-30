@@ -1,0 +1,74 @@
+UC 4.2.1 - Como utilizador, eu pretendo consultar/pesquisar os catálogos de serviços e respetivos serviços que me estão/são disponibilizados.
+
+#1.Requisitos
+Deve haver uma lista de todos os serviços e catálogos de serviços previamente definida.
+É neste UC que é feito o arranjo dos serviços tendo em conta cada diferente função que o utilizador pode assumir.
+
+#2.Análise
+O utilizador consulta o catálogo de serviços que lhe são disponibilizados.
+O sistema deve ter em atenção a função do utilizador para que apenas sejam mostrados os serviços/catálogos de serviços convenientes à sua função.
+
+#3.Design
+
+Foi criado o controlador ListarCatalogosController usando o padrão Controller, responsável pela listagem dos Catálogos. 
+Para esta listagem , é usado o padrão Repository, e posteriormente a classe CatalogoRepository que contém a informação já persistida.
+
+Diagrama de Sequência:
+	title SD - Listar Catálogos
+
+	participant ":USER" as user
+	participant ":ListarCatalogosUI" as lui
+	participant ":ListarCatalogosController" as ctrl
+	participant ":PersistenceContext" as pc
+	participant ":AppSettings" as as
+	participant ":RepositoryFactory" as rf
+	participant ":CatalogoRepository" as repo
+
+	user->lui:show()
+	lui->lui: doShow()
+	activate lui
+	lui->ctrl:listarCatalogos()
+	activate ctrl
+	ctrl->pc:repositories()
+	pc->as:instance()
+	pc->as:getRepositoryFactory
+	activate as
+	as-->rf:create
+	activate rf
+	rf-->as:
+    	deactivate rf
+	as-->ctrl:
+	deactivate as
+	
+	ctrl->rf:consultar()
+	activate rf
+	rf-->repo: create()
+	
+	ctrl->repo: list = todosCatalogos()
+	activate repo
+	repo-->ctrl:
+	deactivate repo
+	
+	ctrl-->lui: list
+	
+	ctrl->rf:pesquisar(keyword)
+	rf-->repo: create()
+	
+	ctrl->repo: list = pesquisarCatalogos(keyword)
+	activate repo
+	repo-->ctrl:
+	deactivate repo
+	
+	ctrl-->lui: list
+
+	deactivate ctrl 
+   	deactivate rf
+	lui-->user:
+	deactivate lui
+
+
+
+#4.Testes
+
+* Tendo em conta que a UC se trata de uma listagem, 
+* o único teste que tem de ser feito será a verificação se a lista dos catálogos não é vazia;

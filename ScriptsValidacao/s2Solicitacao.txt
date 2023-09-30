@@ -1,0 +1,17 @@
+$1 e obrigatorio;
+$2 e obrigatorio;
+$3 e obrigatorio;
+$4 e obrigatorio;
+$9 e obrigatorio;
+if $5 > 0 then
+    $6 == 0;
+;
+if $6 > 0 then
+    $5 == 0;
+;
+if $4 == "unica" then
+    $7 e obrigatorio;
+;
+if $4 == "ate data limite" then
+    $8 e obrigatorio;
+;

@@ -1,0 +1,67 @@
+@startuml
+autonumber
+actor "Responsável Recursos Humanos" as RRH
+
+participant " EspecificarColaboradorUI" as UI
+participant " EspecificarColaboradorController" as CTRL
+participant " BuscarEquipasService" as BES
+participant " colaborador :Colaborador" as COL
+participant " PersistenceContext " as PC
+participant " RepositoryFactory" as RF
+participant " ColaboradorRepository" as CR
+participant " SystemUserRepository" as SUR
+participant "sUser : SystemUser" as SUS
+participant " ScriptRandomPassword" as SCR
+
+
+activate RRH
+RRH --> UI : Adicionar Colaborador
+activate UI
+UI -> BES : findAllEquipas
+BES -> UI : list
+UI --> RRH : displayListaEquipas
+loop while option != 0
+RRH --> UI : escolhe as equias às quais colaborador vai pertencer
+end
+UI -> CTRL : create
+activate CTRL
+UI --> RRH : Pede informação do Colaborador
+RRH --> UI : nomeCompleto,nomeCurto,dataNascimento,morada,numeroContacto,numeroMecanografico,emailInstitucional,funcao
+UI -> CTRL : addColaborador(nomeCompleto,nomeCurto,dataNascimento,morada,numeroContacto,numeroMecanografico,emailInstitucional,funcao)
+CTRL -> SCR : criarPassword
+SCR-> CTRL : password
+
+CTRL -> PC : repositories()
+activate PC
+PC -> CR : create
+PC -> CTRL : factory
+deactivate PC
+CTRL -> RF : colaboradores()
+activate RF
+RF -> CR : create
+RF-> CTRL: colaboradorRepository
+deactivate RF
+CTRL -> COL : create(username,nomeCompleto,nomeCurto,dataNascimento,morada,numeroContacto,numeroMecanografico,emailInstitucional,equipa,password,funcao)
+COL -> CTRL : colaborador
+CTRL -> CR : save(colaborador)
+CTRL -> PC :repositories()
+activate PC
+PC -> SUR : create
+PC-> CTRL : factory
+deactivate PC
+CTRL -> RF : users()
+activate RF
+RF -> SUR : create
+RF -> CTRL : userRepository
+deactivate RF
+CTRL -> SUS :create(username,emailInstitucional,password,funcao)
+SUS -> CTRL : sUser
+CTRL -> SUR :save(sUser)
+CTRL -> UI : colaborador
+deactivate CTRL
+
+UI --> RRH : doShow
+deactivate UI
+deactivate RRH
+
+@enduml

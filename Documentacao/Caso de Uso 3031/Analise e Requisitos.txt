@@ -1,0 +1,19 @@
+# 1. Requisitos
+
+Como utilizador, eu pretendo consultar os meus pedidos (em curso ou o histórico) e respetivos detalhes/estado.
+
+Pré-condições:
+O utilizador deve estar registado na aplicação. 
+
+Pós-condições:
+Deve ser apresentada uma lista com os pedidos desse utilizador
+
+# 2. Análise
+
+O utilizador utiliza o seu menu para consultar os seus pedidos (em curso ou o histórico) e respetivos detalhes/estado. Estes devem estar ordenados dos mais recentes para os mais antigos.
+
+# 3. Plano de testes
+
+Deve ser testada a correta listagem das tarefas, bem como a sua ordenação.
+
+

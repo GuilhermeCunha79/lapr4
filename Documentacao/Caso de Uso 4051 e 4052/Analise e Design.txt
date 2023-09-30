@@ -1,0 +1,17 @@
+Caso de Uso 4051 - Como Gestor de Projeto, eu pretendo que as comunicações realizadas como aplicação servidora através do protocolo SDP2021 estejam protegidas.
+
+Pré-Requisitos:
+Como pré requisitos, apenas consideramos que as ligações aos servidores estejam previamente definidas para que apenas seja trocado o tipo de socket para SSL.
+
+Para a proteção das comunicações, terá de ser aplicado SSL com autenticação mútua baseada em certificados de chave pública.
+Para isso, terão de ser alteradas todas as classes que usem objetos da classe Socket, e passarão a ser usados objetos da classe SSLSocket, classe que faz a proteção automaticamente.
+
+Terão também de ser alteradas algumas propriedade, de acordo com a documentação fornecida, usando comandos como:
+System.setProperty("javax.net.ssl.trustStore", "server.jks");
+System.setProperty("javax.net.ssl.trustStorePassword", "forgotten");
+
+Para gerar a password da autenticação mútua, o comando ./make_cert terá de ser corrido em um ambiente linux, ou algo do mesmo género.
+Depois do documento com a password ser gerado, a UC fica concluida.
+
+Pós-Requisitos:
+Que todas as ligações ao servidor estejam protegidas usando SSLSockets.

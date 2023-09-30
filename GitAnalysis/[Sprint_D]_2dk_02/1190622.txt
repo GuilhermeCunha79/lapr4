@@ -1,0 +1,282 @@
+commit 8be1a278567919a64c2bc8a66ccac79c7ce243dd
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Tue Jun 15 03:21:50 2021 +0100
+
+    Atualizacao classe FormularioVisitor
+
+M	base.core/src/main/java/eapli/base/antlr/formulario/FormularioVisitor.java
+
+commit 3371edeed856a0f8aea03a5fcc47bbd6cd2f4ced
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Tue Jun 15 03:21:36 2021 +0100
+
+    Atualizacao classe ScriptValidacaoParser
+
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoParser.java
+
+commit 0118b228b87dc28300a648f22c35ddf9b358f042
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Mon Jun 14 23:12:47 2021 +0100
+
+    Atualizacao da classe EspecificarServicoController
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/application/EspecificarServicoController.java
+
+commit c47f1abb9543e158b443b0ca601716245caa4b60
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Mon Jun 14 23:12:27 2021 +0100
+
+    Atualizacao dos Controllers de ListarTarefas, RealizarTarefaPendente e ReivindicarTarefasPendentes
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/application/ListarTarefasController.java
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/application/RealizarTarefaPendenteController.java
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/application/ReivindicarTarefasPendentesController.java
+
+commit b9423f27fb2e92ff41c509dc18b6a084cd69337c
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Mon Jun 14 23:11:02 2021 +0100
+
+    Atualizacao da classe JpaCatalogoServicosRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaCatalogoServicosRepository.java
+
+commit f728fd62961ffe5b30a5182a67881b020a440f92
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Mon Jun 14 23:10:26 2021 +0100
+
+    Atualizacao dos Controllers de EspecificarServico e ContinuarEspecificarServico
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/application/ContinuarEspecificarServicoController.java
+
+commit b0756b58cce9eb02ba642acdfb1a7f967858e4f1
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Mon Jun 14 23:09:31 2021 +0100
+
+    Atualizacao da classe Servico
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/domain/Servico.java
+
+commit c9cb4d6d111507b5b293aa28072ef78f9ba0b76c
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Mon Jun 14 23:09:07 2021 +0100
+
+    Atualizacao das classes Jpa e Repository de Servico
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/repositories/ServicoRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaServicoRepository.java
+
+commit d5c3a750835ab98343bc2e8a2c9616dfd390013c
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Mon Jun 14 23:08:10 2021 +0100
+
+    Atualizacao da classe JpaColaboradorRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaColaboradorRepository.java
+
+commit 2af8bf46517b4f764d978d6335eff05b6fedaee7
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Mon Jun 14 23:07:35 2021 +0100
+
+    Atualizacao da classe JpaPedidoRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaPedidoRepository.java
+
+commit db8f8d2d055593933af0ca57e5f5b1e8a068d188
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Mon Jun 14 23:06:15 2021 +0100
+
+    Atualizacao Jpa e Repositories de Tarefa
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/repositories/TarefaRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaTarefaRepository.java
+
+commit 4423402b09ee80c23c6c43514580e8a3fad24eb4
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 16:51:10 2021 +0100
+
+    Atualizacao ServidorFluxos
+
+M	base.daemon/src/main/java/MotorFluxoAtividadesDaemon/ServidorFluxos.java
+
+commit bf206826e15f1a66681b9655d7805deb43db3597
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 16:02:49 2021 +0100
+
+    Atualizacao classe ServidorFluxos
+
+M	base.daemon/src/main/java/MotorFluxoAtividadesDaemon/ServidorFluxos.java
+
+commit d7cc3defaa97c31b55cab10ddcce9e8c0a1e8d7d
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 13:47:56 2021 +0100
+
+    Atualizacao Design UC 3023
+
+M	Documentacao/Caso de Uso 3023/SD_3023.puml
+A	Documentacao/Caso de Uso 3023/SD_3023.svg
+
+commit 9dc5c8df310a6ee2dd7736fdef04dd8fa6cca902
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 13:43:45 2021 +0100
+
+    Atualizacao Design UC 3023
+
+D	Documentacao/Caso de Uso 3023/SD_3023.svg
+
+commit 6290d2b9533fe7b6d8419dadfecf55f092c68670
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 11:06:09 2021 +0100
+
+    Atualizacao classe MainMenu
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/MainMenu.java
+
+commit e66056e91ac3bed051b7062ffc2e7ccdee657839
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 11:05:36 2021 +0100
+
+    UI e classe Action de RealizarTarefaPendente
+
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/colaborador/RealizarTarefaPendenteAction.java
+A	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/colaborador/RealizarTarefaPendenteUI.java
+
+commit 3c97089b6c92ac5d4471180e3179af99e0a2479f
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 11:04:49 2021 +0100
+
+    Atualizacao da classe RealizarTarefaPendenteController
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/application/RealizarTarefaPendenteController.java
+
+commit f772ebcd72878047e92096e8660038fb6d982895
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 11:04:19 2021 +0100
+
+    Atualizacao das classes Repository e Jpa Repository de Tarefa
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/repositories/TarefaRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaTarefaRepository.java
+
+commit adbf0bc27693923ac139694b95dc33311e48afe0
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 11:03:24 2021 +0100
+
+    Atualizacao das classes AtividadeManual e Pedido
+
+M	base.core/src/main/java/eapli/base/fluxosAtividade/domain/AtividadeManual.java
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/domain/Pedido.java
+
+commit a97fd5566beddf57c610d94b7e8b6be35970a86f
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Wed Jun 9 11:03:04 2021 +0100
+
+    Alteracao das classes Tarefa e TipoTarefa
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/domain/Tarefa.java
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/domain/TipoTarefa.java
+
+commit 56031cb3880098d216b2c582b13defe9578d2eef
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Fri Jun 4 17:49:36 2021 +0100
+
+    Controller de RealizarTarefaPendente
+
+A	base.core/src/main/java/eapli/base/gestaoServicosRH/application/RealizarTarefaPendenteController.java
+
+commit d8fc7be29e882351b6e5c872965a4916882c5b5c
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Fri Jun 4 17:49:10 2021 +0100
+
+    Atualizacao da classe SolicitarPedidoController
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/application/SolicitarPedidoController.java
+
+commit 69f5da5a08642c3ebe5ac5f1e6a0018060c126fa
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Fri Jun 4 17:48:51 2021 +0100
+
+    Atualizacao da classe JpaTarefaRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaTarefaRepository.java
+
+commit 130c7fcac7dc2143b60089e7d605083b65f1979b
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Fri Jun 4 17:48:30 2021 +0100
+
+    Atualizacao da classe TarefaRepository
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/repositories/TarefaRepository.java
+
+commit 8d113a6a09c2e46d8ebaa4767a3323989903c2d8
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Fri Jun 4 17:47:52 2021 +0100
+
+    Atualizacao da classe TarefaTest
+
+M	base.core/src/test/java/eapli/base/gestaoServicosRH/domain/TarefaTest.java
+
+commit 649c5e9b36a7ee0c8c0ebb3c08ea5fdd8a7dfad3
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Fri Jun 4 17:47:35 2021 +0100
+
+    Atualizacao das classes Pedido e Tarefa
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/domain/Pedido.java
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/domain/Tarefa.java
+
+commit 4235b138c7bcbdcb747800909aef66d1c00f9465
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Fri Jun 4 17:46:37 2021 +0100
+
+    Design US 3023
+
+A	Documentacao/Caso de Uso 3023/SD_3023.puml
+A	Documentacao/Caso de Uso 3023/SD_3023.svg
+
+commit 1e6798909159bb0a99d59bd8c7238874cf7c14f1
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Tue Jun 1 18:29:34 2021 +0100
+
+    Atualizacao JpaCatalogoServicosRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaCatalogoServicosRepository.java
+
+commit 15cfcb8dc8efdaac17ba52773a01f42032d69498
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Tue Jun 1 18:29:20 2021 +0100
+
+    Atualizacao JpaDepartamentoRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaDepartamentoRepository.java
+
+commit 9195801ca3aa59a6eb1d8316c3b0a580e48f5c7d
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Tue Jun 1 18:29:06 2021 +0100
+
+    Atualizacao JpaEquipaRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaEquipaRepository.java
+
+commit fd34df8eb8f673fa939b7255170382abe52c8fa5
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Tue Jun 1 18:28:47 2021 +0100
+
+    Atualizacao JpaServicoRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaServicoRepository.java
+
+commit a5c69c12a23b3cbe94e6a219c5dc03e428fa6073
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Tue Jun 1 15:23:31 2021 +0100
+
+    Atualizacao classe BaseBackoffice
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/BaseBackoffice.java
+
+commit e5eb8fce4fd65174225b0786601aabefd7a28c82
+Author: Gonçalo Miranda <1190622@isep.ipp.pt>
+Date:   Tue Jun 1 15:22:44 2021 +0100
+
+    Atualizacao classe OrdenarListaService
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/domain/OrdenarListaService.java

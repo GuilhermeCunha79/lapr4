@@ -1,0 +1,1 @@
+Nesta reunião distribuimos os casos de usos e registamos essa mesma distribuição nos issues do bitbucket.

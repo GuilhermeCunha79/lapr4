@@ -1,0 +1,21 @@
+# 1. Requisitos
+
+Como Gestor de Projeto, eu pretendo que seja desenvolvido e integrado no Motor de Fluxos de Atividades algoritmos que assignem automaticamente tarefas a colaboradores de forma a evitar que essas tarefas tenham que ser reivindicadas pelos mesmos.
+
+Pós-condições:
+As tarefas sem colaborador responsável por elas, se existirem, devem ser atribuidas a um colaborador segundo um dos 2 algoritmos pedidos.
+
+# 2. Análise
+
+O motor de fluxos verifica todas as tarefas sem colaborador responsável e através de um dos 2 algoritmos, configurado no sistema, atribui as tarefas.
+Estes 2 algoritmos são:
+1 - baseado em First Came First Served (entre colaboradores de cada equipa), onde é atribuida a tarefa ao colaborador ao qual foi assignada uma tarefa há mais tempo; 
+2 - outro que, no âmbito de cada equipa, considere a quantidade de tarefas pendentes dos colaboradores e o tempo médio de execução de cada uma das tarefas (pré-definido em cada tarefa através da criticidade do catálogo em que o serviço requerido está inserido). 
+O uso ou não de um destes algoritmo e qual o algoritmo a usar deve ser configurável no sistema.
+
+# 3. Plano de testes
+
+Verificação da correta atribuição de tarefas em cada algoritmo.
+
+
+

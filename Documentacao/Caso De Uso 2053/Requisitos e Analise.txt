@@ -1,0 +1,8 @@
+# 1. Requisitos
+
+Como Responsável Recursos Humanos, eu pretendo associar/remover um colaborador a uma equipa.
+
+# 2. Análise
+
+O Responsável Recursos Humanos utiliza o seu menu para associar ou remover um colaborador a uma determinada equipa.
+Um colaborador só pode pertencer a uma equipa dentro de cada departamento.

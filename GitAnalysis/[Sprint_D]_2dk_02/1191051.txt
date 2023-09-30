@@ -1,0 +1,124 @@
+commit 519feb976c450a66910fdfcdde1b24cdc274cd3e
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Sun Jun 13 22:50:25 2021 +0100
+
+    Atualizacao da porta do localhost da dashboard.
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/dashboard/DashboardUI.java
+
+commit 2d724d8bac08d8c4af4b3f6ab247dcbc81868b37
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Sun Jun 13 22:50:02 2021 +0100
+
+    Criacao dos ficheiros necessarios para as SSLSockets.
+
+A	base.core/src/main/java/eapli/base/dashboard/domain/make_certs
+A	base.core/src/main/java/eapli/base/dashboard/domain/servidor.jks
+
+commit 2556b65c5a5621529eafe6a3086f149b45cfdac5
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Sun Jun 13 22:49:28 2021 +0100
+
+    Atualizacao da socket no domain dashboard.
+
+M	base.core/src/main/java/eapli/base/dashboard/domain/HTTPmessage.java
+M	base.core/src/main/java/eapli/base/dashboard/domain/HttpAjaxVotingRequest.java
+M	base.core/src/main/java/eapli/base/dashboard/domain/HttpServerAjaxVoting.java
+
+commit c3fca9123cd491502819cd6116dc63b1212d8216
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Thu Jun 10 00:05:33 2021 +0100
+
+    Analise caso uso 4051
+
+A	Documentacao/Caso de Uso 4051/Analise.txt
+M	base.daemon/target/maven-archiver/pom.properties
+M	base.daemon/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+M	base.daemon/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+
+commit 76885ecfef1cd634631192fde6db640afcf7eb86
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Wed Jun 9 23:23:32 2021 +0100
+
+    Correcao da listagem do Identificador do Pedido na Dashboard.
+
+M	base.core/src/main/java/eapli/base/dashboard/domain/HttpServerAjaxVoting.java
+
+commit 79a6bf0ada1056bf38ac46d85a4a2997f5885256
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Wed Jun 9 22:56:56 2021 +0100
+
+    Correcao do DashboardController. Adicao de timeouts.
+
+M	base.core/src/main/java/eapli/base/dashboard/application/DashboardController.java
+
+commit 762397c11dfc9c4c5699e6b065976270e06314e4
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Wed Jun 9 22:56:27 2021 +0100
+
+    Correcao da DashboadUI.
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/dashboard/DashboardUI.java
+
+commit 9256fa0a1f9fde5de57314a174ea1dfd016d0d42
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Wed Jun 9 22:56:07 2021 +0100
+
+    Correção dos timeouts do Dashboard. Adicao de ajax no Dashboard.
+
+M	base.core/src/main/java/eapli/base/dashboard/domain/HttpServerAjaxVoting.java
+M	base.core/src/main/java/eapli/base/dashboard/domain/www/rcomp-ajax.js
+
+commit 597932071ff075b677dd4923f472b0f77e9c7a4f
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Thu Jun 3 01:58:32 2021 +0100
+
+    Pequena correçao numa listagem desnecessaria no DashboardController.
+
+M	base.core/src/main/java/eapli/base/dashboard/application/DashboardController.java
+
+commit d30f965a5d50901b897bf97f00fa51100b6a0786
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Thu Jun 3 01:10:41 2021 +0100
+
+    Implementacao do Dashboard no MainMenu.
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/BaseBackoffice.java
+
+commit 35d0bf6996f855d18093f0136597cc466e6ea4bd
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Thu Jun 3 01:09:24 2021 +0100
+
+    Alteracao do conteudo do dashboard.
+
+M	base.daemon/src/main/java/MotorFluxoAtividadesDaemon/ConteudoDashboard.java
+M	base.daemon/src/main/java/MotorFluxoAtividadesDaemon/ServidorFluxos.java
+
+commit a5133a9ab9b49d13faf523f1d42b4da5282155e6
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Thu Jun 3 01:08:59 2021 +0100
+
+    Adicao do toString na Criticidade.
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/domain/Criticidade.java
+
+commit 8e6b9803f9a5f60e8bed7ec285b77dc8fdd6d8a8
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Thu Jun 3 01:08:35 2021 +0100
+
+    Dashboard domain. Funcionalidade total.
+
+M	base.core/src/main/java/eapli/base/dashboard/application/DashboardController.java
+M	base.core/src/main/java/eapli/base/dashboard/domain/HttpAjaxVotingRequest.java
+M	base.core/src/main/java/eapli/base/dashboard/domain/HttpServerAjaxVoting.java
+M	base.core/src/main/java/eapli/base/dashboard/domain/www/index.html
+M	base.core/src/main/java/eapli/base/dashboard/domain/www/rcomp-ajax.js
+
+commit 8096b4f5b3e0ca883bbcbb2b5314de693d5c8203
+Author: Sandro Moura <1191051@isep.ipp.pt>
+Date:   Wed Jun 2 18:15:59 2021 +0100
+
+     Ata Reunioes
+
+A	Reunioes/1-6-2021.txt
+A	Reunioes/2-6-2021.txt

@@ -1,0 +1,10 @@
+$1 e obrigatorio;
+$2 e obrigatorio;
+$3 e obrigatorio;
+$4 e obrigatorio;
+$5 e obrigatorio;
+$6 e obrigatorio;
+$7 e obrigatorio;
+$8 e obrigatorio;
+$9 e obrigatorio;
+$3 == $2 + $1;

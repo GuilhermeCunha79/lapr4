@@ -1,0 +1,408 @@
+commit 0506720e6f194f4c1935f895a283156211233f22
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 15 02:23:22 2021 +0100
+
+    Alteração nas classes ANTLR
+
+M	base.core/src/main/java/eapli/base/antlr/formulario/ErroListener.java
+A	base.core/src/main/java/eapli/base/antlr/formulario/FormularioVisitor.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.g4
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.interp
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.tokens
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseListener.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseVisitor.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.interp
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.tokens
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoListener.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoParser.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoVisitor.java
+A	base.core/src/main/java/eapli/base/antlr/formulario/ValidacaoFormulario.java
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/domain/ScriptValidacao.java
+
+commit a7ed81e399c3b123cdd17086894ab284a135ce24
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Mon Jun 14 18:14:02 2021 +0100
+
+    Alteração toString de email
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/domain/EmailInstitucional.java
+
+commit 4347aa0ac755f1c531e2d2e8e831b405de8ea21c
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Mon Jun 14 15:58:38 2021 +0100
+
+    In memory de Departamento
+
+A	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryDepartamentoRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryRepositoryFactory.java
+
+commit 96feeefe64c4487642b8ac0379eeeaac60f76705
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Sun Jun 13 15:14:51 2021 +0100
+
+    Atualização na UI de registar Equipa
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/equipas/RegistarEquipaUI.java
+
+commit b2ec412c9dd829afae14e57e607cccaea18d77e2
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Sun Jun 13 15:14:29 2021 +0100
+
+    Atualização no controller de registar Equipa
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/application/RegistarEquipaController.java
+
+commit b947327ff29775e67eb2879035b73591b87d71d2
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Sun Jun 13 15:12:19 2021 +0100
+
+    Mudanças no repositórios de equipa e adição dos métodos in memory
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/repositories/EquipaRepository.java
+R052	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryEquipaFactory.java	base.persistence.impl/src/main/java/eapli/base/persistence/impl/inmemory/InMemoryEquipaRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaEquipaRepository.java
+
+commit b5e194567bce95c74f9aaa7a2634b0bf60c50761
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 11 19:07:53 2021 +0100
+
+    Configuração algoritmo a utlizar para atribuição das tarefas
+
+M	base.daemon/src/main/java/MotorFluxoAtividadesDaemon/FluxoAtividadeDaemon.java
+M	base.daemon/src/main/java/MotorFluxoAtividadesDaemon/ServidorFluxos.java
+
+commit 62b99c65b77f988f11062fc51824e747960cf1bb
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 9 17:10:03 2021 +0100
+
+    Analise e Requisitos do caso de uso 4072
+
+A	Documentacao/Caso de Uso 4072/Analise e Requisitos.txt
+
+commit b5889dad2c8ddc6ae9b471141fc04e8c2c533c7c
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 9 16:14:52 2021 +0100
+
+    Atualização dos algoritmos do servidor de fluxos
+
+M	base.daemon/src/main/java/MotorFluxoAtividadesDaemon/ServidorFluxos.java
+
+commit d8681ac1abeeefb346356dfc8bb19420707f0deb
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 9 16:14:25 2021 +0100
+
+    Criação de método no repositório de tarefa para encontrar tarefas do dia atual
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/repositories/TarefaRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaTarefaRepository.java
+
+commit 2b867725432952a60672c2a2af24db1058414929
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 9 15:24:55 2021 +0100
+
+    Algoritmo FCFS para a atribuição de tarefas aos colaboradores
+
+M	base.daemon/src/main/java/MotorFluxoAtividadesDaemon/ServidorFluxos.java
+
+commit d3fc1a470fb2357505847916ca478a6c369b0e42
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 9 15:23:50 2021 +0100
+
+    Atualização da classe Tarefa
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/domain/Tarefa.java
+
+commit ea5be9bfeaa45d182b8bec4bcf7b9ee4f330d9b1
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 8 23:37:10 2021 +0100
+
+    Adição do algoritmo de atribuição de tarefas ao servidor de fluxos
+
+M	base.daemon/src/main/java/MotorFluxoAtividadesDaemon/ServidorFluxos.java
+
+commit 904de2af84853c1fc89e1aad68e244ceb54eec68
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 8 23:36:45 2021 +0100
+
+    Alterações nos repositórios de Tarefa e Pedido
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/repositories/TarefaRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaPedidoRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaTarefaRepository.java
+
+commit bbf58b56bf8483b14ae8f4f2da1e5d4f80574987
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 8 23:33:54 2021 +0100
+
+    Modificações nas classes de Tarefa e Criticidade
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/domain/Criticidade.java
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/domain/Tarefa.java
+
+commit b5257b5464a15a22b16f62ac4905982d5ac1fcd4
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Sat Jun 5 01:14:11 2021 +0100
+
+    Dependências para o email sender
+
+M	base.core/pom.xml
+
+commit a9c0856487d0fc1d6efaa7c783f9462308e901fb
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 14:46:15 2021 +0100
+
+    Import no Main Menu
+
+M	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/MainMenu.java
+
+commit b13b50a4095fe77857ac38bde0f9a88acb5eb4f0
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 14:41:55 2021 +0100
+
+    Atualização do main menu
+
+M	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/MainMenu.java
+
+commit 6c571e663b52d24a531685486ad160599580cc6c
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 14:37:43 2021 +0100
+
+    Alterações no pom
+
+M	base.app.user.console/pom.xml
+
+commit aeaabb720fbd861d90e8461d11b35a6e404da30e
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 14:37:28 2021 +0100
+
+    UI de dar feedback
+
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/pedido/DarFeedbackPedidoAction.java
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/pedido/DarFeedbackPedidoUI.java
+
+commit d89e7592b0f28c7841dfc130f60b2bdcb005feb1
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 14:36:41 2021 +0100
+
+    Método de definir Feedback
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/domain/Pedido.java
+
+commit 917ddbe302fe424f7cd08e8a64ed3f9a829f2158
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 14:33:29 2021 +0100
+
+    Controller dar feedback
+
+A	base.core/src/main/java/eapli/base/users/application/DarFeedbackPedidoController.java
+
+commit 620118ae87ec495e203040b56ec650316f61fb28
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 14:31:07 2021 +0100
+
+    Design caso de uso 3051
+
+A	Documentacao/Caso de Uso 3051/Design.png
+
+commit 4b93f9f6164f909dc9755028d5c66f71844066e8
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 14:13:08 2021 +0100
+
+    Criação de método para buscar pedidos terminados
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/repositories/PedidoRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaPedidoRepository.java
+
+commit ebc4ffc5a053656f72bbef7a8aa5c61e9bf59bbb
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 14:10:54 2021 +0100
+
+    Analise e Requisitos do Caso de Uso 3051
+
+A	Documentacao/Caso de Uso 3051/Analise e Requisitos.txt
+
+commit bb7c24b1191c035b46222edc3bf23c850dd85bdc
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Fri Jun 4 13:45:49 2021 +0100
+
+    Eliminação de 2 classes e correção de imports
+
+D	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/catalogoServicos/CatalogoServicosPrinter.java
+M	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/pedido/SolicitarPedidoUI.java
+D	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/servico/ServicoPrinter.java
+
+commit 7ca1161faf32b104118dcdac30f22a698d7e1792
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Thu Jun 3 01:32:45 2021 +0100
+
+    Alteração design caso de uso 3031
+
+M	Documentacao/Caso de Uso 3031/Design.png
+
+commit 15e9b4cbdd6305c834ee076ccf1e73058d80fb48
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 17:11:38 2021 +0100
+
+    Alterações na UI de listar pedidos
+
+M	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/pedido/ListarPedidosUI.java
+
+commit 081e0764e6d01b6c4a513819e2dced5dbad634e5
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 17:11:15 2021 +0100
+
+    Alterações Controller de listar pedidos
+
+M	base.core/src/main/java/eapli/base/users/application/ListarPedidosController.java
+
+commit f94ccec18d277ba2f30e9f79ecc0f3714bf3e3de
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 17:10:53 2021 +0100
+
+    Design Caso de Uso 3031
+
+A	Documentacao/Caso de Uso 3031/Design.png
+
+commit 80802c5a1f8fa41dec8b55c87e790db2d42d8916
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 15:22:45 2021 +0100
+
+    Alteração do pom
+
+M	base.app.common.console/pom.xml
+M	pom.xml
+
+commit 428480ab7f91e8d5a49bef9b74054acc5978f927
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 03:23:10 2021 +0100
+
+    Opção de listar pedidos no menu
+
+M	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/MainMenu.java
+
+commit dfc615a36c04140ec12c881a8b9465a432cdfcce
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 01:35:57 2021 +0100
+
+    Alterações nas classes de repositório de pedido
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/repositories/PedidoRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaPedidoRepository.java
+
+commit 2204f60d83a074b6ba042a995ff36c5bf8adbc1e
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 01:35:20 2021 +0100
+
+    Service de listar Pedidos
+
+A	base.core/src/main/java/eapli/base/users/application/ListarPedidosService.java
+
+commit 560d072b368ff0b3255a9b1f783d6d5e2a9d6c78
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 01:34:59 2021 +0100
+
+    Controller de listarPedidos
+
+A	base.core/src/main/java/eapli/base/users/application/ListarPedidosController.java
+
+commit 064a7f2241569525a0d60a4b3e1e33d256c46744
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 01:34:47 2021 +0100
+
+    UI e Action de ListarPedidos
+
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/pedido/ListarPedidosAction.java
+A	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/pedido/ListarPedidosUI.java
+
+commit 147846c6833dde9831fcf826d54c994e82f38f02
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 01:34:23 2021 +0100
+
+    ToString da classe Pedido
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/domain/Pedido.java
+
+commit c3a67d9c1cbe0bd016cb5db42062feb27291cdc6
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Wed Jun 2 00:47:46 2021 +0100
+
+    Análise e Requisitos do caso de uso 3031
+
+A	Documentacao/Caso de Uso 3031/Analise e Requisitos.txt
+
+commit 4c9bf4514e175bb7fdb52fcdd0c2e8ae556333de
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 1 17:52:34 2021 +0100
+
+    Correção de erro no JpaPedidoRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaPedidoRepository.java
+
+commit 842499c533637dd60ba79eaf368d537a34bb434e
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 1 17:50:28 2021 +0100
+
+    Atualização da UI de solicitar Pedido
+
+M	base.app.user.console/src/main/java/eapli/base/app/user/console/presentation/pedido/SolicitarPedidoUI.java
+
+commit 3dffa4d8578a0de28aa1528c4920273bb318292f
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 1 17:50:03 2021 +0100
+
+    Atualização de repositórios de JPA
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/repositories/PedidoRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaPedidoRepository.java
+
+commit 0113a44ebfa1becc4c41384feea2c805a142168e
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 1 17:49:41 2021 +0100
+
+    Atualização do controller de solicitar Pedido
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/application/SolicitarPedidoController.java
+
+commit 78fa401997aec7475f14ed67a712dca0f530c089
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 1 17:24:24 2021 +0100
+
+    Atualização da classe JpaColaboradorRepository
+
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaColaboradorRepository.java
+
+commit 7674b432c6b6b1b0ac3c728c0c7da17048c5b77b
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 1 17:16:11 2021 +0100
+
+    Alterações na UI relacionadas com criticidade
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/criticidade/DefinirNiveisCriticidadeUI.java
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/servicos/AtribuirCriticidadeCatalogoUI.java
+
+commit cb2266aa72c6dcf47d2c04b73f1edebe1762ddcd
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 1 17:15:48 2021 +0100
+
+    Alteração nas classes de repositório de criticidade
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/application/DefinirNiveisCriticidadeController.java
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/repositories/CriticidadeRepository.java
+M	base.persistence.impl/src/main/java/eapli/base/persistence/impl/jpa/JpaCriticidadeRepository.java
+
+commit c54d6bbfc846f9bb68af483090538c2a66744164
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 1 16:18:07 2021 +0100
+
+    Adição de uma dependência no pom do módulo daemon
+
+M	base.daemon/pom.xml
+
+commit 6968b3ef8d1f852162467a5fb69b473f22322903
+Author: Rui Ribeiro <1191047@isep.ipp.pt>
+Date:   Tue Jun 1 16:17:34 2021 +0100
+
+    Alteração do ip do servidor na dashboard
+
+M	base.core/src/main/java/eapli/base/dashboard/application/DashboardController.java

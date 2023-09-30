@@ -1,0 +1,253 @@
+commit 42c8d1d63ff8ccdd9185f70d8b3ea237f6ac1404
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Tue Jun 15 16:37:24 2021 +0100
+
+    análise da UC 1007
+
+A	Documentacao/Caso de Uso 1007/UC_1007.md
+
+commit 65a659089b4d75db607508b8eead5988240ae62b
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Tue Jun 15 15:32:24 2021 +0100
+
+    alteração nas properties
+
+M	base.core/src/main/resources/ecafeteria.sample.properties
+
+commit 05491c82dd3735290d31e8c84de83896495770bb
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Tue Jun 15 15:31:24 2021 +0100
+
+    alteração na classe emailHandler
+
+M	base.core/src/main/java/eapli/base/emailHandler/EmailHandler.java
+
+commit 488ed5cec24a49816c3a254cc3f291966d06a30b
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Mon Jun 14 17:51:16 2021 +0100
+
+    implemtenção do método de enviar email
+
+M	base.bootstrappers/src/main/java/eapli/base/infrastructure/bootstrapers/ColaboradorBootstrapper.java
+
+commit 8be00078427636b01c58f3300e7e1fd599654a25
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Mon Jun 14 17:49:50 2021 +0100
+
+    implementação do método de enviar email
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/colaborador/EspecificarColaboradorUI.java
+
+commit 78b5d209685338ae8b8538c959e81b844c89de74
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Mon Jun 14 17:46:52 2021 +0100
+
+    implementação do método de enviar email
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/application/EspecificarColaboradorController.java
+
+commit 70c784654090d3651a444f7f979079f9a035c68b
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Sun Jun 13 16:53:00 2021 +0100
+
+    implementação do visitor na realização de tarefas Automáticas
+
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasBaseVisitor.java
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasParser.java
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasVisitor.java
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasVisitors.java
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/testeTarefaAutomatica.txt
+
+commit 93969c3fce7898c8912d32ce410b5f4d067c7eb3
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Sat Jun 12 17:19:15 2021 +0100
+
+    continuação de alterações na gramática da tarefa automática
+
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticas.g4
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticas.interp
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasBaseListener.java
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasBaseVisitor.java
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasListener.java
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasParser.java
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasVisitor.java
+
+commit 7562828ddb23cde7876a1e978509f34074e6b344
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Fri Jun 11 22:31:50 2021 +0100
+
+    alteração gramática tarefa automática
+
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticas.g4
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasParser.java
+
+commit 95820644d256eef45a3d2b2b646f7f0a7b6f4a09
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Fri Jun 11 22:26:19 2021 +0100
+
+    gramática do script da tarefa automática
+
+M	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticas.g4
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticas.interp
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticas.tokens
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasBaseListener.java
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasBaseVisitor.java
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasLexer.interp
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasLexer.java
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasLexer.tokens
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasListener.java
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasParser.java
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticasVisitor.java
+
+commit f26e1ded938a269fb994098d21af876f53f54fff
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Fri Jun 11 22:25:24 2021 +0100
+
+    continuação da alteração da gramática do formulário
+
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.g4
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.interp
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.tokens
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseListener.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseVisitor.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.interp
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.tokens
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoListener.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoParser.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoVisitor.java
+
+commit a4b4d94b448a0d2a3f6d0644aa37409b526bf809
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Fri Jun 11 15:41:06 2021 +0100
+
+    continuação da resolução de erros na gramática
+
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.g4
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.interp
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoParser.java
+
+commit 13ab42dc6d8c992a8356dfdaabe4042fa2accb10
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Thu Jun 10 17:34:45 2021 +0100
+
+    continuação da resolução de problemas na gramática
+
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.g4
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.interp
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseListener.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseVisitor.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoListener.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoParser.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoVisitor.java
+
+commit 013655ad1fd64847041f6ff2cbfe25b8d888f846
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Thu Jun 10 15:50:56 2021 +0100
+
+    continuação da resolução de erros na gramática
+
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.g4
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.interp
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoParser.java
+
+commit d97a48d3072b5ba32ad1756f86cae1c00673aaff
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Tue Jun 8 17:34:58 2021 +0100
+
+    alteração de metodo de ordenação da lista por Criticidade
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/domain/OrdenarListaService.java
+
+commit 2c1b62a0ae1ba6ba702db4f90f9193a9b90a9cd7
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Tue Jun 8 17:27:49 2021 +0100
+
+    adição de imports
+
+M	base.core/src/main/java/eapli/base/gestaoServicosHD/domain/ScriptValidacao.java
+
+commit dd130e88710e31b134ade4a9ec9db476a8613166
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Tue Jun 8 17:23:40 2021 +0100
+
+    começo da correção da gramática do formulário para resolução de erros
+
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.g4
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.interp
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.tokens
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseListener.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseVisitor.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.interp
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.tokens
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoListener.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoParser.java
+M	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoVisitor.java
+
+commit ce02f1a09b9fa7efa0761d56e41e99bf12f7b012
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Mon Jun 7 13:50:13 2021 +0100
+
+    começo da implementação de envio de email
+
+M	base.app.backoffice.console/src/main/java/eapli/base/app/backoffice/console/presentation/colaborador/EspecificarColaboradorUI.java
+
+commit 99586a8015e4b22a2c0a59115a278e5f3e7fbb8f
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Mon Jun 7 13:49:10 2021 +0100
+
+    começo da implementação de envio de emails quando colaborador se regista
+
+M	base.core/src/main/java/eapli/base/gestaoServicosRH/application/EspecificarColaboradorController.java
+
+commit f780dcf1357c490785cd3a17a01f366959402510
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Sat Jun 5 15:21:17 2021 +0100
+
+    alteração de packages e criação de nova gramática(ainda não está alterada)
+
+R095	base.core/src/main/java/eapli/base/antlr/ErroListener.java	base.core/src/main/java/eapli/base/antlr/formulario/ErroListener.java
+R100	base.core/src/main/java/eapli/base/antlr/ScriptValidacao.g4	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.g4
+R100	base.core/src/main/java/eapli/base/antlr/ScriptValidacao.interp	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.interp
+R100	base.core/src/main/java/eapli/base/antlr/ScriptValidacao.tokens	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacao.tokens
+R099	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoBaseListener.java	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseListener.java
+R099	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoBaseVisitor.java	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoBaseVisitor.java
+R091	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoEvalVisitor.java	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoEvalVisitor.java
+R100	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoLexer.interp	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.interp
+R099	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoLexer.java	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.java
+R100	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoLexer.tokens	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoLexer.tokens
+R099	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoListener.java	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoListener.java
+R099	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoParser.java	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoParser.java
+R097	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoVisitor.java	base.core/src/main/java/eapli/base/antlr/formulario/ScriptValidacaoVisitor.java
+A	base.core/src/main/java/eapli/base/antlr/tarefaAutomatica/ScriptValidacaoTarefasAutomaticas.g4
+
+commit f48efa80369888ae70a13815620834e0aed32529
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Sat Jun 5 14:54:38 2021 +0100
+
+    colocação dos dados do email no email handler para serpossivel enviar emails
+
+M	base.core/src/main/java/eapli/base/emailHandler/EmailHandler.java
+
+commit 8754259039ce7f621403b81fbed486ce3848e01a
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Sat Jun 5 00:46:52 2021 +0100
+
+    classe que trata de enviar emails, ainda precisa ser resolvido um problema nas dependicies
+
+A	base.core/src/main/java/eapli/base/emailHandler/EmailHandler.java
+
+commit 7868b9d9046d947d3dfb50d8486f65e93c6137f4
+Author: Joao Osorio <1190699@isep.ipp.pt>
+Date:   Tue Jun 1 18:28:34 2021 +0100
+
+    geração do ficheiros de antlr e tentativa de resolução de um erro
+
+M	base.core/src/main/java/eapli/base/antlr/ScriptValidacao.g4
+M	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoBaseListener.java
+M	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoBaseVisitor.java
+M	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoLexer.java
+M	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoListener.java
+M	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoParser.java
+M	base.core/src/main/java/eapli/base/antlr/ScriptValidacaoVisitor.java

@@ -1,0 +1,19 @@
+# 1. Requisitos
+
+Como utilizador, eu pretendo transmitir o meu grau de satisfação sobre a resolução de um dado pedido por mim efetuado. 
+
+Pré-condições:
+O utilizador deve estar registado na aplicação e devem existir pedidos no estado concluido. 
+
+Pós-condições:
+O feedback é registado no pedido.
+
+# 2. Análise
+
+O utilizador utiliza o seu menu para fornecer um feedback após a resolução dos seus pedidos. Este feedback será um inteiro entre 1 e 10.
+
+# 3. Plano de testes
+
+Deve ser testada se os valores de feedback fornecidos estão dentro dos limites do que é pedido.
+
+

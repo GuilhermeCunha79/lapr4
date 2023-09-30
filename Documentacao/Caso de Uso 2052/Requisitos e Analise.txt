@@ -1,0 +1,10 @@
+# 1. Requisitos
+
+Como Responsável Recursos Humanos(colaborador com função) pretendo cria uma nova equipa.
+
+# 2. Análise
+
+O Responsável Recursos Humanos utiliza o seu menu para criar uma nova equipa. Uma equipa caracteriza-se por um ser de um determinado tipo, um código único, um acrónimo (também único), uma designação e por ter um ou mais colaboradores responsáveis pela equipa.
+O acrónimo pode ter no máximo 10 carateres.
+O código de equipa é um código alfanumérico com um máximo de 15 carateres.
+

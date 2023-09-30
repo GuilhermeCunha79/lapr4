@@ -1,0 +1,6 @@
+$1 e obrigatorio;
+$2 e obrigatorio;
+$3 e obrigatorio;
+if $1 != 21 && $1 != 20 then
+	$2.decimal == 0;
+;

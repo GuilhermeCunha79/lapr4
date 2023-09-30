@@ -1,0 +1,20 @@
+# 1. Requisitos
+
+Como Gestor de Serviços de Help desk (GSH), eu pretendo proceder à especificação de um novo serviço, devendo o sistema permitir que a mesma fique imcompleta e seja, posteriormente, retomada.
+
+# 2. Análise
+
+O Gestor de Serviços de Help desk utiliza o seu menu para especificar um novo serviço. Um serviço caracteriza-se por ser de um código, um título, uma descrição breve, uma descrição completa, um ícone, uma(s) keyword(s), um formulário, catálogo onde ficará disponibilizado.
+O Título pode ter no máximo 10 carateres.
+O código de serviço é um código alfa-numérico introduzido e pode ter no máximo 15 carateres.
+A Descrição Breve pode ter no máximo 40 carateres;
+A Descrição Completa pode ter no máximo 100 carateres;
+KeyWord pode ter no máximo 15 carateres;
+Um serviço permanece em draft aquando da sua criação. Para o deixar de ser deve ter pelo menos um formulário e esse formulário um atributo de formulário;
+O identificador de formulário é numérico e pode ter no máximo 15 carateres;
+O nome de formulário é alfa-numérico e pode ter no máximo 15 carateres;
+A Etiqueta de atributo de formulário é alfa-numérica e pode ter no máximo 15 carateres;
+A Expressão regular de atributo de formulário não pode ser vazia;
+O nome de variável de atributo de formulário é alfa-numérico e pode ter no máximo 15 carateres;
+O Ícone deve ter um minimo de qualidade (Ainda a ser definido pela equipa).
+Tipos de dados a considerar no formulário: Inteiro, String, Bool, Data, Ficheiro, ListaDeValores(Enumerado).

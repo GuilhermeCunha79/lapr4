@@ -1,0 +1,88 @@
+@startuml
+autonumber
+
+
+participant ":EspecificarServicoUI" as UI
+participant ":EspecificarServicoController" as CTRL
+participant ":PersistenceContext" as PSC
+participant ":RepositoryFactory" as REPFAC
+participant ":CatalogoServicosRepository" as CSREP
+participant ":Servico" as SVC
+participant ":ServicoRepository" as SREP
+participant ":CatalogoServicos" as CS
+participant ":Formulario" as FL
+participant ":AtributoFormulario" as AF
+
+activate UI
+UI -> CTRL : create
+activate CTRL
+UI -> CTRL : getCatalogosServicos
+CTRL -> PSC : respositories()
+activate PSC
+PSC -> REPFAC : create
+activate REPFAC
+REPFAC -> CSREP : create
+activate CSREP
+deactivate CSREP
+deactivate REPFAC
+deactivate PSC
+CTRL -> CSREP : findAll
+activate CSREP
+deactivate CSREP
+CTRL --> UI : CatalogosServicos
+UI -> UI : doShow()
+UI -> CTRL : criarServico(codigo,descBreve,descCompleta,requerFeedback,Catalogo)
+CTRL -> SVC : novoServico=create(codigo,descBreve,descCompleta,requerFeedback)
+activate SVC
+deactivate SVC
+CTRL -> PSC : respositories()
+activate PSC
+PSC -> REPFAC : create
+activate REPFAC
+REPFAC -> SREP : create
+activate SREP
+deactivate SREP
+deactivate REPFAC
+deactivate PSC
+CTRL -> SREP : save(novoServico)
+activate SREP
+deactivate SREP
+CTRL -> CS : addServico(novoServico)
+activate CS
+deactivate CS
+CTRL -> CSREP : save(Catalogo)
+activate CSREP
+deactivate CSREP
+loop Enquanto o utilizador pretender adicionar formularios
+UI -> CTRL : criarFormularioServico(identificadorFormulario,nomeFormulario,Servico)
+CTRL -> FL : novoFormulario=create(identificadorFormulario,nomeFormulario)
+activate FL
+deactivate FL
+CTRL -> SVC : addFormulario(novoFormulario)
+activate SVC
+deactivate SVC
+CTRL -> SREP : save(novoServico)
+activate SREP
+deactivate SREP
+end loop
+loop Enquanto o utilizador pretender adicionar atributos de formulario
+UI -> CTRL : getFormularios
+CTRL -> SVC : getFormularios()
+activate SVC
+deactivate SVC
+CTRL --> UI : Formularios
+UI -> CTRL : criarAtributoFormularioServico(etiqueta,descricao,tipoDados,expressaoRegular,nomeVariavel,Servico,Formulario)
+CTRL -> AF : novoAtributoFormulario=create(etiqueta,descricao,tipoDados,expressaoRegular,nomeVariavel)
+activate AF
+deactivate AF
+CTRL -> FL : addAtributoFormulario(novoAtributoFormulario)
+activate FL
+deactivate FL
+CTRL -> SREP : save(novoServico)
+activate SREP
+deactivate SREP
+end loop
+deactivate CTRL
+deactivate UI
+
+@enduml

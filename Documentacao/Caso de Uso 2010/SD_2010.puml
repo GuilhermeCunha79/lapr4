@@ -1,0 +1,44 @@
+@startuml
+autonumber
+actor "Gestor de Servicos HelpDesk" as GSH
+
+participant " DefinirNiveisCriticidadeUI" as UI
+participant " DefinirNiveisCriticidadeController" as CTRL
+participant " criticidade :Criticidade" as CRI
+participant " PersistenceContext " as PC
+participant " RepositoryFactory" as RF
+participant " CriticidadeRepository" as CR
+participant  ":Cor " as COR
+
+
+activate GSH
+GSH --> UI : Definir níveis criticidade
+activate UI
+UI -> CTRL : create
+activate CTRL
+UI --> GSH : Pede informação da criticidade
+GSH --> UI : etiqueta,valor,nomeCor,vermelho,verde,azul,tempoMaximo,tempoMedio
+UI -> CTRL : addCriticidade(etiqueta,valor,nomeCor,vermelho,verde,azul,tempoMaximo,tempoMedio)
+CTRL -> COR : corDeGravidade = novaCor(vermelho,verde,azul,nomeCor)
+
+CTRL -> PC : repositories()
+activate PC
+PC -> CR : create
+PC -> CTRL : factory
+deactivate PC
+CTRL -> RF : criticidades()
+activate RF
+RF -> CR : create
+RF-> CTRL: criticidadeRepository
+deactivate RF
+CTRL -> CRI :create(corDeGravidade,valor,etiqueta,tempoMaximo,tempoMedio)
+CRI-> CTRL : criticiddade
+CTRL -> CR : save(criticidade)
+CTRL -> UI : criticidade
+deactivate CTRL
+
+UI --> GSH : displayCriticidadeInfo
+deactivate UI
+deactivate GSH
+
+@enduml

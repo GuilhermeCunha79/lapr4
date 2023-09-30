@@ -1,0 +1,13 @@
+# 1. Requisitos
+
+Como Gestor de Serviços de Help desk (GSH), eu pretendo criar um novo catálogo de serviços.
+
+# 2. Análise
+
+O Gestor de Serviços de Help desk utiliza o seu menu para criar um novo catálogo de serviços. Um catálogo de serviços caracteriza-se por ser de um identificador, um título, uma descrição breve, uma descrição completa, um ícone, um colaborador responsável, uma ou mais equipas a quem o catálogo fica disponivel.
+O identificador é numérico e pode ter no máximo 15 carateres;
+O Título pode ter no máximo 10 carateres;
+A Descrição Breve pode ter no máximo 40 carateres;
+A Descrição Completa pode ter no máximo 100 carateres;
+Deve ter pelo menos um colaborador responsável e uma equipa associada;
+O Ícone deve ter um minimo de qualidade (Ainda a ser definido pela equipa).

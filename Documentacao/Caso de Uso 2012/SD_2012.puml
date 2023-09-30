@@ -1,0 +1,51 @@
+@startuml
+autonumber
+actor "Gestor de Serviços Helpdesk" as GSH
+
+participant " AtribuirCriticidadeCatalogoUI" as UI
+participant " AtribuirCriticidadeCatalogoController" as CTRL
+participant " PersistenceContext " as PC
+participant " RepositoryFactory" as RF
+participant " CatalogoRepository" as CR
+participant " CriticidadeRepository" as CRIR
+participant "catalgoEscolhido: Catalogo" as CAL
+
+GSH -> UI : começa o processo de atribuição de um nível de criticidade a um catálogo.
+activate UI
+UI -> CTRL : getCatalogos
+activate CTRL
+CTRL-> PC : repositories()
+activate PC
+PC -> RF : create
+deactivate PC
+activate RF
+RF ->CR : create
+activate CR
+deactivate RF
+
+deactivate CR
+CTRL -> CR : findAll
+activate CR
+deactivate CR
+UI -> GSH : mostra os catalogos e solicita a escolha de um
+GSH -> UI : escolhe o catálogo a que deseja atribuir o nível de criticidade
+CTRL-> PC : repositories()
+activate PC
+PC -> RF : create
+deactivate PC
+activate RF
+RF -> CRIR : create
+activate CRIR
+deactivate RF
+deactivate CRIR
+
+CTRL-> CRIR :findAll
+activate CRIR
+deactivate CRIR
+UI -> GSH :mostra os níveis de criticidade e solicita a escolha de um
+GSH -> UI : escolhe o nível de criticidade a que deseja associar o catálogo.
+UI -> CTRL : associateCriticidade
+CTRL -> CAL : associate(critcidadeEscolhida)
+UI-> GSH : demonstra o sucesso da operação
+
+@enduml

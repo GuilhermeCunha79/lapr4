@@ -1,0 +1,9 @@
+# 1. Requisitos
+
+Como utilizador, eu pretendo solicitar um serviço do catálogo de serviços que me é disponibilizado.
+
+# 2. Análise
+
+Adicionar metodo para validar a informação preenchida pelo utilizador quando este preenche o formulario de solicitação do serviço escolhido.
+O pedido apenas é criado se a validação retornar true.
+Em caso de a validação retornar false, é mostrada na consola a mensagem de erro e volta a solicitar o preenchimento do formulário desde o inicio.

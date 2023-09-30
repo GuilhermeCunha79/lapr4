@@ -1,0 +1,1 @@
+Corremos o servidor, e alternando o algoritmo podemos visualizar a correta atribuição das tarefas às instâncias, dependentes do algoritmo que estava a ser testado.

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>  
+<class>
+    <product>  
+        <codigo>101</codigo>  
+        <preco>10.50</preco>  
+		<percentagemBaseDesconto>20</percentagemBaseDesconto>
+        <categoria>ABC</categoria>
+    </product>  
+      
+    <product>  
+        <codigo>102</codigo>  
+        <preco>12.00</preco>  
+		<percentagemBaseDesconto>20</percentagemBaseDesconto>
+        <categoria>ABC</categoria>  
+    </product>  
+  
+    <product>  
+        <codigo>103</codigo>  
+        <preco>15.00</preco>  
+		<percentagemBaseDesconto>20</percentagemBaseDesconto>
+        <categoria>Singh</categoria>  
+    </product>  
+  
+    <product>  
+        <codigo>104</codigo>  
+        <preco>15.00</preco>  
+		<percentagemBaseDesconto>20</percentagemBaseDesconto>
+        <categoria>Singh</categoria>  
+    </product>  
+  
+</class>  

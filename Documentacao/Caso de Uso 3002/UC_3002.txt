@@ -1,0 +1,76 @@
+UC 4.2.2 - Como utilizador, eu pretendo solicitar um serviço do catálogo de serviços que me é disponibilizado.
+
+#1.Pré-requisitos
+A listagem dos serviços/catálogos disponibilizados é previamente feita.
+A tabela dos serviços/catálogos não pode ser vazia (não posso solicitar algo que não existe).
+
+#2.Análise
+Após a listagem dos serviços/catálogos, o utilizador solicitará um serviço, criando assim uma instância de Pedido (referente ao serviço escolhido).
+
+#3.Desing
+@startuml
+title SD - Solicitar Pedidos
+
+    participant ":SolicitarPedidoUI" as lui
+    participant ":SolicitarPedidoController" as ctrl
+    participant ":Pedido" as pdd
+    participant ":Tarefa" as tarefa
+    participant ":PersistenceContext" as pc
+    participant ":RepositoryFactory" as rf
+    participant ":PedidoRepository" as repo
+    participant ":TarefaRepository" as repo3
+
+    ref over  lui , ctrl, pc, rf, repo, pdd : Referência ao Caso De Uso 3002 - Listagem de todos os catálogos e respectivos serviços
+        activate lui
+        activate ctrl
+        
+    lui->lui:doShow()    
+    lui->ctrl:create
+    ctrl->pc:repositories()
+    pc->rf:create
+    rf->repo:create
+    activate repo
+    deactivate repo
+
+    ctrl->repo: list = pedidos()
+	activate repo
+	repo-->ctrl:
+	deactivate repo
+	ctrl-->lui: list
+
+    lui->ctrl:create
+    ctrl->pc:repositories()
+    pc->rf:create
+    rf->repo3:create
+    activate repo3
+    deactivate repo3
+    
+    ctrl->repo3: list = tarefas()
+	activate repo3
+	repo-->ctrl:
+	deactivate repo3
+		ctrl-->lui: list
+
+    lui->ctrl :criarPedido(urgencia, dataLimiteResolucao, servico, dadosFormulario);
+    ctrl->pdd :novoPedido  = novoPedido(urgencia, dataLimiteResolucao, servico, identificadorPedido, dadosFormulario);
+    ctrl->repo:save(novoPedido)
+    
+     ctrl->tarefa :novaTarefaAprovacao = novaTarefa(novoPedido);
+    ctrl->repo3:save(novaTarefaAprovacao)
+    deactivate ctrl
+       deactivate lui
+@enduml
+
+
+#4. Pós-requisitos
+Um novo pedido fica registado no PedidoRepository (acrescentado à tabela de Pedidos).
+
+#5. Testes
+Devem ser feitos testes a todos os parametros introduzidos pelo utilizador bem como os parametros introduzidos pelo sistema.
+	-Parâmetro Urgencia deve ser um enumerado (REDUZIDA, MODERADA OU URGENTE), válido e não nulo;
+	-Parâmetro Feedback deve ser um inteiro entre 0 e 10, válido e não nulo;
+	-Parâmetro DataLimiteResolucao deve cumprir o formato dd/mm/yyyy, válido e não nulo;
+	-Parâmetro IdentificadorPedido deve ser válido, único e não nulo;
+	-Parâmetro Serviço deve ser válido e não nulo;
+	-Parâmetro DataSolicitacao deve cumprir o formato dd/mm/yyyy, válido e não nulo;
+

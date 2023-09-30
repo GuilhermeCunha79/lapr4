@@ -1,0 +1,167 @@
+@startuml
+autonumber
+
+
+participant ":EspecificarServicoUI" as UI
+participant ":EspecificarServicoController" as CTRL
+participant ":PersistenceContext" as PSC
+participant ":RepositoryFactory" as REPFAC
+participant ":CatalogoServicosRepository" as CSREP
+participant ":ServicoRepository" as SREP
+participant ":Servico" as SVC
+participant ":CatalogoServicos" as CS
+participant ":Formulario" as FL
+participant ":AtributoFormulario" as AF
+participant ":FluxoAtividade" as FA
+participant ":AtividadeManual" as AM
+participant ":AtividadeAutomaticaScript" as AAS
+
+activate UI
+UI -> CTRL : create
+activate CTRL
+UI -> CTRL : getServicos
+CTRL -> PSC : respositories()
+activate PSC
+PSC -> REPFAC : create
+activate REPFAC
+REPFAC -> SREP : create
+activate SREP
+deactivate SREP
+deactivate REPFAC
+deactivate PSC
+CTRL -> CSREP : findAll
+activate CSREP
+deactivate CSREP
+CTRL --> UI : Servicos
+UI -> UI : doShow()
+opt
+UI -> CTRL : atualizarServico(descBreveServico)
+CTRL -> SVC : atualizarServico(descBreve)
+activate SVC
+deactivate SVC
+end opt
+opt
+UI -> CTRL : atualizarServico(descCompletaServico)
+CTRL -> SVC : atualizarServico(descCompleta)
+activate SVC
+deactivate SVC
+end opt
+opt
+UI -> CTRL : atualizarServico(keywords,Servico)
+CTRL -> SVC : atualizarServico(keywords)
+activate SVC
+deactivate SVC
+end opt
+opt
+UI -> CTRL : criarFormularioServico(identificadorFormulario,nomeFormulario,Servico,formularioSolicitacao)
+CTRL -> FL : novoFormulario=create(identificadorFormulario,nomeFormulario)
+activate FL
+deactivate FL
+opt
+CTRL -> SVC : addFormulario(novoFormulario)
+activate SVC
+deactivate SVC
+end opt
+note right : if formularioSolicitacao = false
+opt
+CTRL -> SVC : addFormularioSolicitacao(novoFormulario)
+activate SVC
+deactivate SVC
+end opt
+note right : if formularioSolicitacao = true
+end opt
+opt
+UI -> CTRL : getFormularios
+CTRL -> SVC : getFormularios()
+activate SVC
+deactivate SVC
+CTRL --> UI : Formularios
+UI -> CTRL : criarAtributoFormularioServico(etiqueta,descricao,tipoDados,expressaoRegular,nomeVariavel,Servico,Formulario)
+CTRL -> AF : novoAtributoFormulario=create(etiqueta,descricao,tipoDados,expressaoRegular,nomeVariavel)
+activate AF
+deactivate AF
+CTRL -> FL : addAtributoFormulario(novoAtributoFormulario)
+activate FL
+deactivate FL
+end opt
+opt
+UI -> CTRL : criarFluxoAtividade(Servico, nomeFluxoAtividade)
+CTRL -> FA : novoFluxoAtividade=create(nomeFluxoAtividade)
+CTRL -> SVC : addFluxoAtividade(novoFluxoAtividade)
+activate SVC
+deactivate SVC
+activate FA
+deactivate FA
+UI -> UI : show Atividades Disponiveis
+opt
+UI -> CTRL : novaAtividadeAprovacao(descricaoAtividade,Formulario,Servico)
+CTRL -> CSREP : colaboradoresResponsaveis=findColaboradoresResponsaveis(Servico)
+activate CSREP
+deactivate CSREP
+CTRL -> AM : novaAtividade=create(descricaoAtividade,Formulario,colaboradoresResponsaveis)
+activate AM
+deactivate AM
+CTRL -> SVC : addAtividadeAprovacao(novaAtividade)
+activate SVC
+deactivate SVC
+end opt
+opt
+UI -> CTRL : novaAtividadeManual(descricaoAtividade,Formulario)
+CTRL -> AM : novaAtividade=create(descricaoAtividade,Formulario)
+activate AM
+deactivate AM
+opt
+CTRL -> SVC : addAtividadeFluxoValido(Servico, novaAtividade)
+activate SVC
+SVC -> FA : addAtividadeFluxoValido(novaAtividade)
+activate FA
+deactivate FA
+deactivate SVC
+end opt
+opt
+CTRL -> SVC : addAtividadeFluxoInvalido(Servico, novaAtividade)
+activate SVC
+SVC -> FA : addAtividadeFluxoInvalido(novaAtividade)
+activate FA
+deactivate FA
+deactivate SVC
+end opt
+end opt
+opt
+UI -> CTRL : novaAtividadeAutomaticaScript(descricaoAtividade,script)
+CTRL -> AAS : novaAtividade=create(descricaoAtividade,script)
+activate AAS
+deactivate AAS
+opt
+CTRL -> SVC : addAtividadeFluxoValido(Servico, novaAtividade)
+activate SVC
+SVC -> FA : addAtividadeFluxoValido(novaAtividade)
+activate FA
+deactivate FA
+deactivate SVC
+end opt
+opt
+CTRL -> SVC : addAtividadeFluxoInvalido(Servico, novaAtividade)
+activate SVC
+SVC -> FA : addAtividadeFluxoInvalido(novaAtividade)
+activate FA
+deactivate FA
+deactivate SVC
+end opt
+end opt
+end opt
+opt
+UI -> CTRL : finalizarServico(servico)
+note right : true if servico valido
+CTRL -> SREP : validar(Servico)
+activate SREP
+deactivate SREP
+end opt
+UI -> CTRL : exit
+CTRL -> SREP : save(Servico)
+activate SREP
+deactivate SREP
+deactivate CTRL
+deactivate UI
+
+@enduml

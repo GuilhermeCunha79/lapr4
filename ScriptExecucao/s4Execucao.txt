@@ -1,0 +1,16 @@
+START{
+consultar 1;
+calcValorTotal 1 2;
+AlterarPercentagemBaseDesconto 1 if: valorTotal > 10 then:
+                            desconto e 20%
+                            ;
+				if: valorTotal <= 10 then:
+				 desconto e 1%
+				  ;
+;
+atualizar: percentagemBaseDesconto 1 ABC;
+calcValorDesconto 1 2;
+calcValorTotal 1 2;
+SendEmail(Cotacao para venda por grosso, Valor total inicial 6 Valor total final 9 Valor de Desconto 8);
+}END
+

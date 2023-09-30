@@ -1,0 +1,65 @@
+@startuml
+autonumber
+
+
+participant ":CriarCatalogoServicosUI" as UI
+participant ":CriarCatalogoServicosController" as CTRL
+participant ":PersistenceContext" as PSC
+participant ":RepositoryFactory" as REPFAC
+participant ":ColaboradorRepository" as CREP
+participant ":EquipaRepository" as EQPREP
+participant ":CatalogoServicos" as CS
+participant ":CatalogoServicosRepository" as CSREP
+
+activate UI
+UI -> CTRL : create
+activate CTRL
+UI -> CTRL : getColaboradores
+CTRL -> PSC : repositories()
+activate PSC
+PSC -> REPFAC : create
+activate REPFAC
+REPFAC -> CREP : create
+activate CREP
+deactivate CREP
+deactivate REPFAC
+deactivate PSC
+CTRL -> CREP : findAll
+activate CREP
+deactivate CREP
+CTRL --> UI : Colaboradores
+UI -> CTRL : getEquipas
+CTRL -> PSC : repositories()
+activate PSC
+PSC -> REPFAC : create
+activate REPFAC
+REPFAC -> EQPREP : create
+activate EQPREP
+deactivate EQPREP
+deactivate REPFAC
+deactivate PSC
+CTRL -> EQPREP : findAll
+activate EQPREP
+deactivate EQPREP
+CTRL --> UI : Equipas
+UI -> UI : doShow()
+UI -> CTRL : criarCatalogoServicos(Equipa(s),Colaborador(es),\n idCatalogo,titulo,descBreve,descCompleta)
+CTRL -> CS : novoCatalogoServicos = create(Equipa(s),Colaborador(es),idCatalogo,titulo,descBreve,descCompleta)
+activate CS
+deactivate CS
+CTRL -> PSC : repositories()
+activate PSC
+PSC -> REPFAC : create
+activate REPFAC
+REPFAC -> CSREP : creates
+activate CSREP
+deactivate CSREP
+deactivate REPFAC
+deactivate PSC
+CTRL -> CSREP : save(novoCatalogoServicos)
+activate CSREP
+deactivate CSREP
+deactivate CTRL
+deactivate UI
+
+@enduml

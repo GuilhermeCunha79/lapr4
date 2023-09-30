@@ -1,0 +1,1 @@
+Nesta reunião foi discutido o progresso dos casos usos em termos de design e análise e foi decidido que a implementação do código de um dos casos de uso de maior prioridade deve estar pronto até o final desta semana.

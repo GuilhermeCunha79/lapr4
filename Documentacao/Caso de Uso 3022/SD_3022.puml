@@ -1,0 +1,60 @@
+@startuml
+autonumber
+actor "Utilizador" as USER
+
+participant " ReivindicarTarefasPendentesUI" as UI
+participant " ReivindicarTarefasPendentesController" as CTRL
+participant " PersistenceContext " as PC
+participant " RepositoryFactory" as RF
+participant " TarefaRepository" as TR
+participant " AuthzRegistry" as  AUR
+participant " athz : Authorization Service" as AUT
+participant " us : UserSession" as US
+
+
+
+USER -> UI : começa o processo de reividicação de Tarefas que estão atribuidas ao utili
+activate UI
+UI-> CTRL :buscarTarefas()
+activate CTRL
+CTRL-> PC : repositories()
+activate PC
+PC -> RF : create
+deactivate PC
+activate RF
+RF -> TR : create
+activate TR
+deactivate RF
+deactivate TR
+CTRL -> AUR : authorizationService()
+activate AUR
+AUR -> AUT : session()
+deactivate AUR
+activate AUT
+AUT -> US : authenticatedUser().identity().toString()
+deactivate AUT
+US --> CTRL : username
+UI -> USER : pergunta ao utlizador que tipo de tarefas pretende ver
+USER-> UI : seleciona opção
+opt
+UI-> CTRL: buscarTarefasResolucaoUtilizador()
+CTRL-> TR : buscarTarefasResolucaoUtilizador(username)
+TR --> CTRL : list
+end opt
+
+opt
+UI-> CTRL: buscarTarefasAprovacaoUtilizador()
+CTRL-> TR : buscarTarefasAprovacaoUtilizador(username)
+TR --> CTRL : list
+
+
+
+end opt
+USER -> UI : Escolhe a tarefa que prentende reivindicar.
+UI-> CTRL : reivindicarTarefaPendente(tarefa,username)
+CTRL-> TR : save(tarefa)
+deactivate CTRL
+UI-> USER : confirma o sucesso da operação
+deactivate UI
+
+@enduml

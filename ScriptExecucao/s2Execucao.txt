@@ -1,0 +1,3 @@
+START{
+SendEmail(Autorizacao para Aplicacao de Desconto, Percentagem de Desconto 5 Valor de Desconto 6 Decisao 10);
+}END

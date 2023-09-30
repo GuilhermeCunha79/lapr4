@@ -1,0 +1,1 @@
+Nesta reunião fizemos um ponto de situação do projeto e averiguamos aquilo que faltava para implementar, marcando uma reunião para o dia seguinte para a testagem do programa e realização da apresentação.

@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title>DASHBOARD</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="rcomp-ajax.js"></script>
+</head>
+
+<body
+    onload="refreshVotes(); refreshPersonalInfo(); refreshTarefasPorCriticidade(); refreshTarefasPorUrgencia();drawClock()">
+    <div class="context">
+        <h1>Seja bem-vindo à sua dashboard!</h1>
+    </div>
+    <div class="box">
+        <div class="insideBox">
+            <div class="title">
+                <p>Informação Pessoal</p>
+            </div>
+            <div class="table-wrapper">
+                <div class="table-scroll">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Número Mecanogáfico</th>
+                                <th>Morada</th>
+                            </tr>
+                        </thead>
+                        <tbody id="personalInfo">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="insideBox">
+            <div class="title">
+                <p>Tarefas Ordenadas Por Criticidade</p>
+            </div>
+            <div class="table-wrapper">
+                <div class="table-scroll">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Serviço</th>
+                                <th>ID Pedido</th>
+                                <th>Urgencia</th>
+                                <th>Criticidade</th>
+                                <th>Data de Conclusão</th>
+                                <th>Tempo Restante (dias)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tarefasCriticidade">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="insideBox">
+            <div class="title">
+                <p>Tarefas Ordenadas Por Urgência</p>
+            </div>
+            <div class="table-wrapper">
+                <div class="table-scroll">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Serviço</th>
+                                <th>ID Pedido</th>
+                                <th>Urgencia</th>
+                                <th>Criticidade</th>
+                                <th>Data de Conclusão</th>
+                                <th>Tempo Restante (dias)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tarefasUrgencia">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

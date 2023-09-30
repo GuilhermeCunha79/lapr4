@@ -1,0 +1,21 @@
+# 1. Requisitos
+
+Como Gestor de Projeto, eu pretendo que seja desenvolvido e integrado no Motor de Fluxos de Atividades  algoritmos que distribuam a realização de tarefas automáticas pelas diversas instâncias do Executor de Tarefas Automáticas existentes na infraestrutura instalada.
+
+Pós-condições:
+As tarefas automáticas por realizar, se existirem, devem ser atribuidas a uma instância segundo um dos 2 algoritmos pedidos.
+
+# 2. Análise
+
+O motor de fluxos verifica as tarefas automáticas por executar e através de um dos 2 algoritmos, configurado no sistema, atribui a instância de executor de tarefas que a executa.
+Estes 2 algoritmos são:
+1 - baseado em First Came First Served (entre instâncias do Executor de Tarefas), onde é atribuida a tarefa à instância ao qual foi assignada uma tarefa há mais tempo(Está em 1º na fila de espera); 
+2 - outro que tenha em consideração a disponibilidade das respetivas instâncias e a carga atual das mesmas, considerando a quantidade de tarefas pendentes para cada instância. 
+O uso ou não de um destes algoritmo e qual o algoritmo a usar deve ser configurável no sistema.
+
+# 3. Plano de testes
+
+Verificação da correta atribuição de tarefas em cada algoritmo.
+
+
+
